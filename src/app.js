@@ -31,7 +31,7 @@ app.set("view engine", "handlebars");
 app.set("views", "./src/views");
 
 //Multer
-app.post("/upload", upload.single("imagen"), (req, res) => {
+app.post("/upload", upload.array("imagen"), (req, res) => {
   res.send("Imagen cargada");
 });
 
